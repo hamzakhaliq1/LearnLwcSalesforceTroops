@@ -1,0 +1,33 @@
+<apex:page >
+<script src="/soap/ajax/36.0/connection.js" type="text/javascript"></script>
+<script type="text/javascript">
+    // Query for the preference value
+    sforce.connection.sessionId = '{! $Api.Session_ID }';
+    var uiPrefQuery = "SELECT Id, UserPreferencesLightningExperiencePreferred " +
+                      "FROM User WHERE Id = '{! $User.Id }'";
+    var userThemePreferenceResult = sforce.connection.query(uiPrefQuery);
+    
+    // Display the returned result on the page
+    document.addEventListener('DOMContentLoaded', function(event){
+        document.getElementById('userThemePreferenceResult').innerHTML = 
+            userThemePreferenceResult;
+    });
+</script>
+    <apex:pageBlock >
+        
+    <style type="text/css">
+        .asideText { font-style: italic; }
+    </style>
+        <apex:form >
+    <apex:outputText style="font-weight: bold;" 
+        value="This text is styled directly."/>
+    <apex:outputText styleClass="asideText" 
+        value="This text is styled via a stylesheet class."/>
+        <apex:commandButton value="some"/>
+            </apex:form>
+</apex:pageBlock>
+<apex:slds /><h1>userThemePreferenceResult (JSON)</h1>
+<pre><span id="userThemePreferenceResult"/></pre>
+    <apex:outputText value="{!$Label.label_hamza}">  </apex:outputText>
+    <apex:image title="th"  url="{!$Resource.trailhead_logo}"></apex:image>  
+</apex:page>

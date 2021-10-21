@@ -1,0 +1,82 @@
+<template>
+    <lightning-card title="Hello" icon-name="custom:custom14">
+        <div class="slds-var-m-around_medium">
+            Hello, {greeting}!
+            The learning is for  {course}
+            <lightning-input type="text" label="Enter Something" onchange={handleChange}></lightning-input>
+
+        </div>
+            
+        
+
+        
+    </lightning-card>
+
+    <lightning-card title="@Track Properties" icon-name="custom:custom14">
+        <div class="slds-var-m-around_medium">
+            
+            <lightning-input type="text" label="Enter Something" onchange={trackhandler}></lightning-input>
+            <div>{address.city} is my City </address></div>
+
+        </div>
+            
+        
+
+        
+    </lightning-card>
+
+    <lightning-card title="Getter" icon-name="custom:custom14">
+        <div class="slds-var-m-around_medium">
+            
+            
+            <div>{firstUser} is the first User and sum is : {sumofTwoNumber} </address></div>
+
+        </div>
+            
+        
+
+        
+    </lightning-card>
+
+    <lightning-card title="Conditional Rendering" icon-name="custom:custom14">
+        <div class="slds-var-m-around_medium">
+          <lightning-button 
+          variant="brand"
+          label="Show Data"
+          title="Show Data"
+          onclick={handleclick} 
+          
+           ></lightning-button>
+           <template if:true={isVisible}>
+               <div>Hello and Welcome to Conditional Rendering</div>
+           </template>
+           <template if:false={isVisible}>
+               <div>Click the button to Show Data</div>
+           </template>
+
+        </div>
+            
+        
+
+        
+    </lightning-card>
+
+    <lightning-card title="Typing and changing the state" icon-name="custom:custom14">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="text" label="Enter Something" onchange={changeHandler}></lightning-input>
+           <template if:true={typedHello}>
+               <div>You Typed Hello ;)</div>
+           </template>
+           <template if:false={typedHello}>
+               <div>Type hello to show data</div>
+           </template>
+
+        </div>
+            
+        
+
+        
+    </lightning-card>
+
+
+</template>

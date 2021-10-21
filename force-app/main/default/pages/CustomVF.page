@@ -1,0 +1,39 @@
+<apex:page standardController="Account" lightningStylesheets="true">
+
+    <apex:pageBlock title="Page Block Title">
+   	<apex:pageBlockSection title="Block section title">
+      
+     	<apex:form >
+    <apex:inputField value="{! Account.Name }"/>
+    <apex:inputField value="{! Account.Phone }"/>        
+    <apex:inputField value="{! Account.Industry }"/>        
+    <apex:inputField value="{! Account.AnnualRevenue }"/>
+            <apex:commandButton action="{!save}" value="save" />
+    
+</apex:form>
+     
+        
+
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+        
+         <apex:pageBlock title="Page Block Second Title">
+   	<apex:pageBlockSection title="Block section title">
+        
+	<apex:form >
+    <apex:inputField value="{!Account.Name}" id="id1"/>
+    <apex:commandButton value="someValue" action="{!save}"/>
+    
+    
+	</apex:form>
+    </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+    <script>
+    function changeCase(elId){
+        var x = document.getElementById(elId);
+        x.value = x.value.toUpperCase();
+    }
+</script>
+    
+    </apex:page>

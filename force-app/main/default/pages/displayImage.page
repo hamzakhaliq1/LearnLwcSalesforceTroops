@@ -1,0 +1,5 @@
+<apex:page sidebar="false" showHeader="false">
+    <apex:image alt="No Image" value="https://developer.salesforce.com/files/salesforce-developer-network-logo.png"
+                id="THEimage"/>
+    
+</apex:page>

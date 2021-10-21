@@ -1,0 +1,14 @@
+<template>
+    <lightning-card icon-name="action:new_note" title="Lightning Input Component" >
+        <div class="slds-m-vertical_medium">
+            <span class="slds-text-heading_small"> Please Enter the Following Details </span>
+            
+            <lightning-input type="text" label="Enter Name " onchange={handlechange}></lightning-input>
+            <lightning-input type="text" label="Enter Phone " ></lightning-input>
+            <lightning-input type="email" label="Email"></lightning-input>
+            <lightning-button variant="success" label="Submit"></lightning-button>
+        
+
+        </div>
+    </lightning-card>
+</template>

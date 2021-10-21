@@ -1,0 +1,20 @@
+<apex:page standardController="Account" lightningStylesheets="true">
+    
+    <h1>Edit Account</h1>
+    
+    <apex:form >
+    <apex:pageBlock title="Sometitle">
+        <apex:pageMessages />
+        <apex:pageBlockSection columns="1">
+           
+    <apex:inputField value="{! Account.Name }"/>
+    <apex:inputField value="{! Account.Phone }"/>        
+    <apex:inputField value="{! Account.Industry }"/>        
+    <apex:inputField value="{! Account.AnnualRevenue }"/>
+            <apex:commandButton action="{!save}" value="save" />
+               
+</apex:pageBlockSection>
+    </apex:pageBlock>
+        </apex:form>
+    
+</apex:page>

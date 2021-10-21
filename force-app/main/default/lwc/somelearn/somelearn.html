@@ -1,0 +1,16 @@
+<template>
+  <lightning-card title="LWC Learn">
+  
+      <lightning-record-form
+          object-api-name={objectApiName}
+          fields={fields}
+          onsuccess={handleSuccess}>
+      </lightning-record-form>
+      {announcement}
+
+      <div>
+        <input type="text" value={announcement} oninput={handleInput} >
+      </div>
+      
+  </lightning-card>
+</template>
