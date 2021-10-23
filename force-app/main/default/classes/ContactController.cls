@@ -11,6 +11,18 @@ public with sharing class ContactController {
     }
 
     @AuraEnabled(cacheable=true)
+    public static List<Contact> getContacts() {
+        /*return [
+            SELECT Id, FirstName , LastName, Email
+            FROM Contact
+            WHERE Picture__c != null
+            WITH SECURITY_ENFORCED
+            LIMIT 10
+        ];*/
+        throw new AuraHandledException('Forced error');
+    }
+
+    @AuraEnabled(cacheable=true)
     public static List<Contact> findContacts(String searchKey) {
         String key = '%' + searchKey + '%';
         return [
